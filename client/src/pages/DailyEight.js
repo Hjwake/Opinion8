@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "./DailyEight.css";
 import Question from '../components/Question';
-import logo_orange from "../images/Opinion8_Logo-Orange_NS.svg";
-
+import logo_orange from "../images/Opinion8_Logo-OrangeOutline-WhiteFill_NS.svg";
+import Q1Image from "../images/Q1-image.png";
+import Q2Image from "../images/Q2-image.png";
+// Import other question images as needed
 
 function DailyEight() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -45,7 +47,7 @@ function DailyEight() {
       options: ["Conservatives", "Labour", "Liberal Democrats", "Scottish National Party", "Plaid Cymru", "Green", "An independent politician", "I wouldn’t vote"],
     },
     {
-      text: "Climate activist Greta Thunberg has been arrested by Dutch police at a protest in The Hague, where protesters had planned to block The Hague's busy A12 highway for what Extinction Rebellion (XR) organisers say was the 37th time. The road has been subject to regular blockades since 2022. Do you support Greta Thunberg’s campaign method?",
+      text: "Climate activist Greta Thunberg has been arrested by Dutch police in The Hague, where protesters had planned to block The Hague's busy A12 highway for what Extinction Rebellion organisers say was the 37th time. Do you support Greta Thunberg’s campaign method?",
       options: ["Not at all", "Not particularly", "I don’t feel strongly either way", "Sort of", "Absolutely"],
     },
     {
@@ -61,32 +63,33 @@ function DailyEight() {
       options: ["Jam first, with cream on top", "Cream first, with jam on top", "I have no preference…"],
     }
   ];
-  
-
   const currentQuestion = questions[currentQuestionIndex];
+  const backgroundImageClass = `question-image-section question-image-section-${currentQuestionIndex + 1}`;
 
   return (
     <div className="dailyeight-body">
-      <img src={logo_orange} alt="Opinion8" className="logo dailyeight-logo"/>
-      <h2>Today's eight.</h2>
-        <div>
-          <Question
-            current_number = {currentQuestionIndex + 1}
-            total_number= {8}
-            text={currentQuestion.text}
-            options={currentQuestion.options}
-            onAnswer={(answer) => handleAnswer(currentQuestion.text, answer)}
-          />
-          {currentQuestionIndex > 0 && (
-            <button onClick={handlePrev} className="btn_white_white_text">Previous</button>
-          )}
-          {currentQuestionIndex < questions.length - 1 && (
-            <button onClick={handleNext} className="btn_orange_white_text">Next</button>
-          )}
-          {currentQuestionIndex === questions.length - 1 && (
-            <button onClick={handleSubmit} className="btn_orange_white_text">Finish</button>
-          )}
-        </div>
+        <div className={backgroundImageClass}>
+        <img src={logo_orange} alt="Opinion8" className="logo dailyeight-logo"/>
+        <h2>Today's eight.</h2>
+      </div>
+      <div className="question-wrapper">
+        <Question
+          current_number={currentQuestionIndex + 1}
+          total_number={8}
+          text={currentQuestion.text}
+          options={currentQuestion.options}
+          onAnswer={(answer) => handleAnswer(currentQuestion.text, answer)}
+        />
+        {currentQuestionIndex > 0 && (
+          <button onClick={handlePrev}>Previous</button>
+        )}
+        {currentQuestionIndex < questions.length - 1 && (
+          <button onClick={handleNext} className="btn_orange_white_text">Next</button>
+        )}
+        {currentQuestionIndex === questions.length - 1 && (
+          <button onClick={handleSubmit} className="btn_orange_white_text">Finish</button>
+        )}
+      </div>
     </div>
   );
 }

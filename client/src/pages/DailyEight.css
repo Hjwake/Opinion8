@@ -1,12 +1,53 @@
-.dailyeight-body {
-    padding-left: 50px;
-    padding-right: 50px;
-}
-
 .dailyeight-logo {
     margin-top: 20px;
 }
 
+.dailyeight-body .question-wrapper {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
 .dailyeight-body h2 {
-    color: #2727E6;
+    color: #FFFFFF;
+}
+
+.question-image-section {
+    padding: 50px 0 20px 50px;
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    margin-bottom: 30px;
+}
+  
+.question-image-section-1 {
+    background-image: url('../images/Q1-image.png');
+    
+}
+
+.question-image-section-2 {
+    background-image: url('../images/Q2-image.png');
+}
+  
+.question-image-section-3 {
+    background-image: url('../images/Q3-image.png');
+}
+
+.question-image-section-4 {
+    background-image: url('../images/Q4-image.png');
+}
+
+.question-image-section-5 {
+    background-image: url('../images/Q5-image.png');
+}
+
+.question-image-section-6 {
+    background-image: url('../images/Q6-image.png');
+}
+
+.question-image-section-7 {
+    background-image: url('../images/Q7-image.png');
+}
+
+.question-image-section-8 {
+    background-image: url('../images/Q8-image.png');
 }
