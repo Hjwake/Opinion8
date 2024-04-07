@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import "./DailyEight.css";
+import "./WelcomeQuestions.css";
 import Question from '../components/Question';
 import logo_orange from "../images/Opinion8_Logo-Orange_NS.svg";
 
@@ -46,7 +46,7 @@ function WelcomeQuestions() {
   const currentQuestion = questions[currentQuestionIndex];
 
   return (
-    <div className="dailyeight-body">
+    <div className="welcomequestions-body">
       <img src={logo_orange} alt="Opinion8" className="logo dailyeight-logo"/>
       <h2>About you.</h2>
         <div>
