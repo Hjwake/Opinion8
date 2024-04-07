@@ -49,7 +49,7 @@ app.post('/signin', (req, res) => {
         }
         // Check for empty array
         else if (result.length < 1) {
-            res.status(418).send(`Username doesn't match.`)
+            res.status(418).send(`Username not found.`)
         }
         // Correct username entered, compare entered password with hashed password
         else {
@@ -58,7 +58,7 @@ app.post('/signin', (req, res) => {
                     res.send({username})
                 }
                 if (!match) {
-                    res.status(418).send(`Password doesn't match.`)
+                    res.status(418).send(`Incorrect password.`)
                 }
             })
         }

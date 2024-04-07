@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
-import logo_blue_white_fill from "../images/Opinion8_Logo-BlueOutline-WhiteFill_NS.svg";
+import logo_orange_white_fill from "../images/Opinion8_Logo-OrangeOutline-WhiteFill_NS.svg";
 import daily_opinion8_image from "../images/daily-opinion8-image.png";
 import "./Profile.css";
 
@@ -10,15 +10,15 @@ function Profile(props) {
     let location = useLocation();
     let eightCompleted = false;
     if (location.state && location.state.eightCompleted != null){
-        eightCompleted = true;
+        eightCompleted = location.state.eightCompleted;
     }
     return (
         <div className="profile-body">
-            <img src={logo_blue_white_fill} alt="Opinion8" className="logo profile-logo"/>
+            <img src={logo_orange_white_fill} alt="Opinion8" className="logo profile-logo"/>
             {user ? <h2>Hello, {user}.</h2> : null}
             {eightCompleted ? ( // Conditionally render content if survey is completed
                 <div className="profile-section-todays-eight-completed">
-                    <h4>You've done today's eight. Check back again tomorrow!</h4>
+                    <h4>Thanks for completing today's eight. Check back again tomorrow!</h4>
                 </div>
             ) : (
                 <div>

@@ -71,7 +71,8 @@ function DailyEight() {
       <h2>Today's eight.</h2>
         <div>
           <Question
-            number = {currentQuestionIndex + 1}
+            current_number = {currentQuestionIndex + 1}
+            total_number= {8}
             text={currentQuestion.text}
             options={currentQuestion.options}
             onAnswer={(answer) => handleAnswer(currentQuestion.text, answer)}

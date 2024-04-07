@@ -1,5 +1,5 @@
 .profile-body {
-    background-color: #011F45;
+    background-color: #2727E6;
     padding-left: 50px;
     padding-right: 50px;
     min-height: 100vh;
@@ -23,7 +23,7 @@
 }
 
 .profile-body .profile-section-results {
-    background-color: #2727E6;
+    background-color: #011F45;
     color: #FFFFFF;
     border-radius: 30px;
     padding: 15px;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "./Question.css";
 
-function Question({ number, text, options, onAnswer }) {
+function Question({ current_number, total_number, text, options, onAnswer }) {
   const [selectedOption, setSelectedOption] = useState('');
 
   const handleOptionChange = (e) => {
@@ -10,7 +10,7 @@ function Question({ number, text, options, onAnswer }) {
 
   return (
     <div className="question">
-      <h5 className="question-number">{number} of 8</h5>
+      <h5 className="question-number">{current_number} of {total_number}</h5>
       <h4>{text}</h4>
       <form>
         {options.map((option, index) => (

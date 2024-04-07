@@ -38,7 +38,7 @@ function Signup() {
           <input id='password' type='password' value={password} onChange={(e) => setPassword(e.target.value)}/ >
         </div>
         {error ? <p>{error}</p> : null}
-        {user ? <Navigate to='/profile' replace={true} /> : null}
+        {user ? <Navigate to='/welcome-questions' replace={true} /> : null}
       </div>
 
         <div className="signup-button-and-terms">
