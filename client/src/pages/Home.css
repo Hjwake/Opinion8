@@ -1,0 +1,39 @@
+.homepage-body {
+    background-color: #2727E6;
+    display: flex; /* Use flexbox to align items */
+    flex-direction: column; /* Align items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    min-height: 100vh;
+}
+
+.homepage-headline-and-buttons {
+    max-width: 80%;
+    text-align: center;
+}
+
+.homepage-body h1, .homepage-body p {
+    color: #FFFFFF;
+}
+
+.homepage-body .home-logo {
+    margin-top: 20px;
+}
+
+.home-button-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.home-button-container button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 50px;
+}
+
+.homepage-body .homepage-footer-rocket {
+    width: 100%;
+}

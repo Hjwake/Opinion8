@@ -7,6 +7,8 @@ import Signin from "./pages/Signin.js";
 import Signup from "./pages/Signup.js";
 import Profile from "./pages/Profile.js";
 import Error from "./pages/Error.js";
+import DailyEight from './pages/DailyEight.js';
+import Results from './pages/Results.js';
 
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
           <Route path="/sign-up" element={<Signup/>} />
           <Route path="/sign-in" element={<Signin/>} />
           <Route path="/profile" element={<Profile/>} />
+          <Route path="/daily-eight" element={<DailyEight/>} />
+          <Route path="/results" element={<Results/>} />
           <Route path="*" element={<Error/>}/>
         </Routes>
       </BrowserRouter>

@@ -2,6 +2,8 @@ import {useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import { signup } from '../store/authSlice';
 import {Navigate} from "react-router-dom";
+import logo_orange from "../images/Opinion8_Logo-Orange_NS.svg";
+import "./Signup.css";
 
 function Signup() {
 
@@ -21,19 +23,29 @@ function Signup() {
   }
 
   return (
-    <div className="App">
+    <div className="signup-body">
       <form onSubmit={submitHandler}>
-        <h3>Sign Up</h3>
-        <label htmlFor='username'>Username</label>
-        <input id='username' type='text' value={username} onChange={(e) => setUsername(e.target.value)}/ >
-        <label htmlFor='password'>Password</label>
-        <input id='password' type='password' value={password} onChange={(e) => setPassword(e.target.value)}/ >
-        <div>
-          <button type="button">Cancel</button>
-          <button type="submit">Submit</button>
+      <div className="signup-text-and-form">
+      <img src={logo_orange} className="signup-logo" alt="Opinion8" />
+        <h2>Join the community of Opinioneighters.</h2>
+        <p>It's getting exciting! Choose a username and password to create your account.</p>
+        <div className="form-group">
+          <label htmlFor='username'>Username</label>
+          <input id='username' type='text' value={username} onChange={(e) => setUsername(e.target.value)}/ >
+        </div>
+        <div className="form-group">
+          <label htmlFor='password'>Password</label>
+          <input id='password' type='password' value={password} onChange={(e) => setPassword(e.target.value)}/ >
         </div>
         {error ? <p>{error}</p> : null}
         {user ? <Navigate to='/profile' replace={true} /> : null}
+      </div>
+
+        <div className="signup-button-and-terms">
+          {/* <button type="button">Go back</button> */}
+          <button type="submit" className="btn_orange_white_text">Sign up</button>
+          <p>By signing up, you’re agreeing to our terms and conditions and privacy policy.</p>
+        </div>
       </form>
     </div>
   );

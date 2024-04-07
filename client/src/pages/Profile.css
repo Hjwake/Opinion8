@@ -1,0 +1,41 @@
+.profile-body {
+    background-color: #011F45;
+    padding-left: 50px;
+    padding-right: 50px;
+    min-height: 100vh;
+}
+
+.profile-body .profile-logo {
+    margin-top: 20px;
+}
+
+.profile-body h2 {
+    color: #ffffff;
+}
+
+.profile-body .profile-section-daily-opinion8, .profile-body .profile-section-todays-eight-completed {
+    background-color: #FF4638;
+    color: #FFFFFF;
+    border-radius: 30px;
+    padding: 15px;
+    margin-top: 40px;
+    display: flex;
+}
+
+.profile-body .profile-section-results {
+    background-color: #2727E6;
+    color: #FFFFFF;
+    border-radius: 30px;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+.profile-body .profile-section-daily-opinion8 .text-left h4{
+    text-decoration: none;
+}
+
+.profile-body .profile-section-daily-opinion8 img{
+    object-fit: contain;
+    width: 100%;
+    height: 200px;
+}
