@@ -77,7 +77,7 @@ function DailyEight() {
             onAnswer={(answer) => handleAnswer(currentQuestion.text, answer)}
           />
           {currentQuestionIndex > 0 && (
-            <button onClick={handlePrev} className="btn_white_orange_text">Previous</button>
+            <button onClick={handlePrev} className="btn_white_white_text">Previous</button>
           )}
           {currentQuestionIndex < questions.length - 1 && (
             <button onClick={handleNext} className="btn_orange_white_text">Next</button>
